@@ -32,6 +32,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		764A15632CC64FF00037F29F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		764A15642CC64FF90037F29F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		764A15652CC650000037F29F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		766059652C9DB29000E0386D = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +74,9 @@
 			children = (
 				766059712C9DB29000E0386D /* Wordy_MusicApp.swift */,
 				766059732C9DB29000E0386D /* ContentView.swift */,
+				764A15652CC650000037F29F /* View */,
+				764A15642CC64FF90037F29F /* ViewModel */,
+				764A15632CC64FF00037F29F /* Model */,
 				766059752C9DB29100E0386D /* Assets.xcassets */,
 				766059772C9DB29100E0386D /* Preview Content */,
 			);
