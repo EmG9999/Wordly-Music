@@ -16,6 +16,7 @@
 		766059742C9DB29000E0386D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766059732C9DB29000E0386D /* ContentView.swift */; };
 		766059762C9DB29100E0386D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766059752C9DB29100E0386D /* Assets.xcassets */; };
 		766059792C9DB29100E0386D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766059782C9DB29100E0386D /* Preview Assets.xcassets */; };
+		E9AB0B0E2CC91A9600A8759F /* Accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB0B0D2CC91A9600A8759F /* Accueil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		766059732C9DB29000E0386D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		766059752C9DB29100E0386D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		766059782C9DB29100E0386D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9AB0B0D2CC91A9600A8759F /* Accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Accueil.swift; path = /Users/apprenant123/Desktop/Accueil.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		766059702C9DB29000E0386D /* Wordy-Music */ = {
 			isa = PBXGroup;
 			children = (
+				E9AB0B0D2CC91A9600A8759F /* Accueil.swift */,
 				766059712C9DB29000E0386D /* Wordy_MusicApp.swift */,
 				766059732C9DB29000E0386D /* ContentView.swift */,
 				764A15652CC650000037F29F /* View */,
@@ -183,6 +186,7 @@
 				764A156B2CC68D710037F29F /* DescriptionViewModel.swift in Sources */,
 				766059742C9DB29000E0386D /* ContentView.swift in Sources */,
 				766059722C9DB29000E0386D /* Wordy_MusicApp.swift in Sources */,
+				E9AB0B0E2CC91A9600A8759F /* Accueil.swift in Sources */,
 				764A156D2CC6A1FE0037F29F /* DescriptionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
