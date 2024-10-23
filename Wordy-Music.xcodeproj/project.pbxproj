@@ -11,6 +11,9 @@
 		766059742C9DB29000E0386D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766059732C9DB29000E0386D /* ContentView.swift */; };
 		766059762C9DB29100E0386D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766059752C9DB29100E0386D /* Assets.xcassets */; };
 		766059792C9DB29100E0386D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766059782C9DB29100E0386D /* Preview Assets.xcassets */; };
+		E93AB9482CC6910800182AFD /* ProfilModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AB9472CC6910800182AFD /* ProfilModel.swift */; };
+		E93AB94A2CC69C1600182AFD /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AB9492CC69C1600182AFD /* ProfilView.swift */; };
+		E93AB94C2CC6FAE500182AFD /* ProfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AB94B2CC6FAE500182AFD /* ProfilViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		766059732C9DB29000E0386D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		766059752C9DB29100E0386D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		766059782C9DB29100E0386D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E93AB9472CC6910800182AFD /* ProfilModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilModel.swift; path = "Wordy-Music/ProfilModel.swift"; sourceTree = SOURCE_ROOT; };
+		E93AB9492CC69C1600182AFD /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilView.swift; path = "Wordy-Music/ProfilView.swift"; sourceTree = SOURCE_ROOT; };
+		E93AB94B2CC6FAE500182AFD /* ProfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilViewModel.swift; path = "Wordy-Music/ProfilViewModel.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,7 @@
 		764A15632CC64FF00037F29F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E93AB9472CC6910800182AFD /* ProfilModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -42,6 +49,7 @@
 		764A15642CC64FF90037F29F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E93AB94B2CC6FAE500182AFD /* ProfilViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -49,6 +57,7 @@
 		764A15652CC650000037F29F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E93AB9492CC69C1600182AFD /* ProfilView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -162,8 +171,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93AB9482CC6910800182AFD /* ProfilModel.swift in Sources */,
 				766059742C9DB29000E0386D /* ContentView.swift in Sources */,
+				E93AB94A2CC69C1600182AFD /* ProfilView.swift in Sources */,
 				766059722C9DB29000E0386D /* Wordy_MusicApp.swift in Sources */,
+				E93AB94C2CC6FAE500182AFD /* ProfilViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

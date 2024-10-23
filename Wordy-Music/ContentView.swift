@@ -7,18 +7,30 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    struct ContentView: View {
+        @StateObject private var profilviewmodels = ProfilViewModel()
+    
+        var body: some View {
+            NavigationView {
+                
+                NavigationLink(destination: ProfilView() ){
+                    Text("Voir mon profil")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .padding()
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(10)
+                }
+                VStack {
+                    Text("Bienvenue sur la page d'accueil")
 
-#Preview {
+                
+                }
+                .navigationTitle("Accueil")
+            }
+        }
+    }
+   #Preview {
     ContentView()
 }
+
