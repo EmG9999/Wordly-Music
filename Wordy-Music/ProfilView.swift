@@ -18,7 +18,6 @@ struct ProfilView: View {
                 .frame(width: 200, height: 200)
 
             Text(viewModel.profil.prenom)
-            Text(viewModel.profil.nom)
             Text(viewModel.profil.pseudo)
             
             
