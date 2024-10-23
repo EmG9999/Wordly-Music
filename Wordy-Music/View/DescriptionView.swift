@@ -12,34 +12,50 @@ struct DescriptionView: View {
     var description: Description
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+       
+            ZStack {
+                LinearGradient(
+                                gradient: Gradient(stops: [
+                                    .init(color: Color(red: 0.0/255.0, green: 77.0/255.0, blue: 99.0/255.0), location: 0.45),
+                                    .init(color: Color(red: 4.0/255.0, green: 156.0/255.0, blue: 204.0/255.0), location: 1.0)
+                                ]),
+                                startPoint: .top,
+                                endPoint: .bottom
+                ).ignoresSafeArea()
                 
-                AsyncImage(url: URL(string: description.image)) { image in
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: .infinity)
-                } placeholder: {
-                    ProgressView()
-                        .frame(maxWidth: .infinity)
+                VStack(alignment: .leading, spacing: 16) {
+                    
+                    AsyncImage(url: URL(string: description.image)) { image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: .infinity)
+                            .cornerRadius(30.0)
+                    } placeholder: {
+                        ProgressView()
+                            .frame(maxWidth: .infinity)
+                    }
+                    
+                    Text(description.titre)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.white)
+                    
+                    Text("Type d'instrument: \(description.typeInstrument)")
+                        .font(.subheadline)
+                        .foregroundStyle(.white)
+                    Text("Pays de l'instrument: \(description.paysInstrument)")
+                        .font(.subheadline)
+                        .foregroundStyle(.white)
+                    
+                    Text(description.description)
+                        .font(.body)
+                        .foregroundStyle(.white)
+                    
                 }
-                
-                Text(description.titre)
-                    .font(.title)
-                    .fontWeight(.bold)
-                
-                Text("Type d'instrument: \(description.typeInstrument)")
-                    .font(.subheadline)
-                Text("Pays de l'instrument: \(description.paysInstrument)")
-                    .font(.subheadline)
-                
-                Text(description.description)
-                    .font(.body)
-                
+                .padding()
             }
-            .padding()
-        }
+        
         .navigationTitle("Description")
     }
 }
