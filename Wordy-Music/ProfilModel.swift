@@ -15,8 +15,8 @@ struct ProfilModel: Identifiable, Codable  {
     var mdp : String
     var pseudo: String
     var bioProfil : String
-    var photoProfil : String?
-    var favoris : Int
+    var photoProfil : String
+    
     
     init() {
         self.nom = ""
@@ -26,7 +26,6 @@ struct ProfilModel: Identifiable, Codable  {
         self.pseudo = ""
         self.bioProfil = ""
         self.photoProfil = ""
-        self.favoris = 1
         
     }
     
