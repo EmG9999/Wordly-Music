@@ -11,6 +11,10 @@
 		766059742C9DB29000E0386D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766059732C9DB29000E0386D /* ContentView.swift */; };
 		766059762C9DB29100E0386D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766059752C9DB29100E0386D /* Assets.xcassets */; };
 		766059792C9DB29100E0386D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766059782C9DB29100E0386D /* Preview Assets.xcassets */; };
+		AF4F3F042CC6742B00DA8F84 /* Sign in.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4F3F032CC6742B00DA8F84 /* Sign in.swift */; };
+		AF4F3F062CC7ADD900DA8F84 /* Log in.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4F3F052CC7ADD900DA8F84 /* Log in.swift */; };
+		AF4F3F082CC7EB6700DA8F84 /* LoginUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4F3F072CC7EB6700DA8F84 /* LoginUserViewModel.swift */; };
+		AF4F3F0A2CC91AE100DA8F84 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4F3F092CC91AE100DA8F84 /* LoginModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		766059732C9DB29000E0386D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		766059752C9DB29100E0386D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		766059782C9DB29100E0386D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AF4F3F032CC6742B00DA8F84 /* Sign in.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Sign in.swift"; path = "Wordy-Music/Sign in.swift"; sourceTree = SOURCE_ROOT; };
+		AF4F3F052CC7ADD900DA8F84 /* Log in.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Log in.swift"; path = "Wordy-Music/Log in.swift"; sourceTree = SOURCE_ROOT; };
+		AF4F3F072CC7EB6700DA8F84 /* LoginUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginUserViewModel.swift; path = "Wordy-Music/LoginUserViewModel.swift"; sourceTree = SOURCE_ROOT; };
+		AF4F3F092CC91AE100DA8F84 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginModel.swift; path = "Wordy-Music/LoginModel.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +43,7 @@
 		764A15632CC64FF00037F29F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF4F3F092CC91AE100DA8F84 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -42,6 +51,7 @@
 		764A15642CC64FF90037F29F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AF4F3F072CC7EB6700DA8F84 /* LoginUserViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -49,6 +59,8 @@
 		764A15652CC650000037F29F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AF4F3F032CC6742B00DA8F84 /* Sign in.swift */,
+				AF4F3F052CC7ADD900DA8F84 /* Log in.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,7 +131,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					7660596D2C9DB29000E0386D = {
 						CreatedOnToolsVersion = 15.4;
@@ -162,7 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4F3F062CC7ADD900DA8F84 /* Log in.swift in Sources */,
+				AF4F3F0A2CC91AE100DA8F84 /* LoginModel.swift in Sources */,
+				AF4F3F082CC7EB6700DA8F84 /* LoginUserViewModel.swift in Sources */,
 				766059742C9DB29000E0386D /* ContentView.swift in Sources */,
+				AF4F3F042CC6742B00DA8F84 /* Sign in.swift in Sources */,
 				766059722C9DB29000E0386D /* Wordy_MusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +191,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -238,6 +255,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
