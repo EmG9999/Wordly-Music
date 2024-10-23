@@ -36,7 +36,7 @@
 		E93AB94D2CC91CA800182AFD /* ProfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilViewModel.swift; path = ../ProfilViewModel.swift; sourceTree = "<group>"; };
 		E93AB94F2CC91CE600182AFD /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilView.swift; path = ../ProfilView.swift; sourceTree = "<group>"; };
 		E93AB9512CC91D0300182AFD /* ProfilModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilModel.swift; path = ../ProfilModel.swift; sourceTree = "<group>"; };
-		E9AB0B0D2CC91A9600A8759F /* Accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Accueil.swift; path = "/Users/apprenant178/Documents/GitHub/Wordly-Music/Wordy-Music/Accueil.swift"; sourceTree = "<absolute>"; };
+		E9AB0B0D2CC91A9600A8759F /* Accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Accueil.swift; path = "/Users/apprenant165/Documents/GitHub/Wordly-Music/Wordy-Music/Accueil.swift"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
