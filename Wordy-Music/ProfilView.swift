@@ -27,6 +27,17 @@ struct ProfilView: View {
                     .frame(width: 175, height: 175)
                     .shadow(radius: 20)
                 
+                AsyncImage(url: URL(string: "http://localhost:8081/images/PhotoProfil.jpeg")) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: .infinity)
+                        .cornerRadius(30.0)
+                } placeholder: {
+                    ProgressView()
+                        .frame(maxWidth: .infinity)
+                }
+                
                 Text("@\(viewModel.profil.pseudo)")
                     .font(.largeTitle)
                     .fontWeight(.bold)
