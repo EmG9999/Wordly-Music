@@ -14,7 +14,7 @@ struct ProfilModel: Identifiable, Codable  {
     var email: String
     var mdp : String
     var pseudo: String
-    var bioProfil : String?
+    var bioProfil : String
     var photoProfil : String?
     var favoris : Int
     

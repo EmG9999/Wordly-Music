@@ -33,7 +33,7 @@ struct SampleView: View {
                     }
                 }
             }
-            .navigationTitle("Samples")
+            .navigationTitle("")
             .onAppear {
                 viewModel.fetchSample()
             }
