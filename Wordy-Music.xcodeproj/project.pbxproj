@@ -8,17 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		766059722C9DB29000E0386D /* Wordy_MusicApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766059712C9DB29000E0386D /* Wordy_MusicApp.swift */; };
-		766059742C9DB29000E0386D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766059732C9DB29000E0386D /* ContentView.swift */; };
 		766059762C9DB29100E0386D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766059752C9DB29100E0386D /* Assets.xcassets */; };
 		766059792C9DB29100E0386D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 766059782C9DB29100E0386D /* Preview Assets.xcassets */; };
+		E93275222CC7E4560014AC9C /* Tabla.wav in Resources */ = {isa = PBXBuildFile; fileRef = E93275212CC7E4560014AC9C /* Tabla.wav */; };
+		E952486B2CC79FA5007D490F /* Accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E952486A2CC79F9C007D490F /* Accueil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7660596E2C9DB29000E0386D /* Wordy-Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wordy-Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		766059712C9DB29000E0386D /* Wordy_MusicApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wordy_MusicApp.swift; sourceTree = "<group>"; };
-		766059732C9DB29000E0386D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		766059752C9DB29100E0386D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		766059782C9DB29100E0386D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E93275212CC7E4560014AC9C /* Tabla.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Tabla.wav; sourceTree = "<group>"; };
+		E952486A2CC79F9C007D490F /* Accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accueil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +74,9 @@
 		766059702C9DB29000E0386D /* Wordy-Music */ = {
 			isa = PBXGroup;
 			children = (
+				E93275212CC7E4560014AC9C /* Tabla.wav */,
+				E952486A2CC79F9C007D490F /* Accueil.swift */,
 				766059712C9DB29000E0386D /* Wordy_MusicApp.swift */,
-				766059732C9DB29000E0386D /* ContentView.swift */,
 				764A15652CC650000037F29F /* View */,
 				764A15642CC64FF90037F29F /* ViewModel */,
 				764A15632CC64FF00037F29F /* Model */,
@@ -150,6 +153,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E93275222CC7E4560014AC9C /* Tabla.wav in Resources */,
 				766059792C9DB29100E0386D /* Preview Assets.xcassets in Resources */,
 				766059762C9DB29100E0386D /* Assets.xcassets in Resources */,
 			);
@@ -162,7 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				766059742C9DB29000E0386D /* ContentView.swift in Sources */,
+				E952486B2CC79FA5007D490F /* Accueil.swift in Sources */,
 				766059722C9DB29000E0386D /* Wordy_MusicApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
