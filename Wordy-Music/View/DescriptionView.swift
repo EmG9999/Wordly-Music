@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct DescriptionView: View {
-    
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showingSheet = false
     var description: Description
     
     var body: some View {
