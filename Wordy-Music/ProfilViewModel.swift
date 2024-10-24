@@ -34,4 +34,6 @@ class ProfilViewModel: ObservableObject {
             }
         }.resume()
     }
+    
+    
 }

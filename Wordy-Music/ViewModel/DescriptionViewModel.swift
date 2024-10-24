@@ -36,6 +36,32 @@ class DescriptionViewModel: ObservableObject {
         }.resume()
     }
     
-    
+    func createSample(sample: Description) {
+        guard let url = URL(string: baseURL) else {
+            print("Invalid URL")
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        do {
+            let data = try JSONEncoder().encode(sample)
+            request.httpBody = data
+        } catch {
+            print("Error encoding data : \(error)")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Error fetching data : \(error)")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.fetchSample()
+            }
+        }.resume()
+    }
     
 }

@@ -33,10 +33,16 @@ struct SampleView: View {
                     }
                 }
             }
-            .navigationTitle("")
+            
             .onAppear {
                 viewModel.fetchSample()
             }
+            .listStyle(.plain)
+            .listRowSeparator(.hidden)
+            .background(Color.clear)
+            .listRowBackground(Color.clear)
+                .scrollContentBackground(.hidden)
+            
         }
     }
 }
