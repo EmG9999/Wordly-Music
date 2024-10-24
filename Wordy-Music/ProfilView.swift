@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfilView: View {
     @StateObject private var viewModel = ProfilViewModel()
+    @State private var newPseudo: String = ""
     
     var body: some View {
         ZStack{
@@ -33,6 +34,35 @@ struct ProfilView: View {
                     .padding(.bottom , 25)
                     .foregroundStyle(.white)
                 
+                TextField("Modifier le pseudo", text: $newPseudo)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal, 40)
+                    .onAppear {
+                        self.newPseudo = viewModel.profil.pseudo
+                    }
+
+                Button(action: {
+                    let updatedProfil = ProfilModel(
+                        id: viewModel.profil.id,
+                        nom: viewModel.profil.nom,
+                        prenom: viewModel.profil.prenom,
+                        email: viewModel.profil.email,
+                        mdp: viewModel.profil.mdp,
+                        pseudo: newPseudo,
+                        bioProfil: viewModel.profil.bioProfil,
+                        photoProfil: viewModel.profil.photoProfil
+                    )
+
+                    viewModel.updatePseudo(updatedProfil)
+                }) {
+                    Text("Enregistrer")
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .padding(.top, 20)
+                
                 Text(viewModel.profil.bioProfil)
                     .padding(.horizontal, 40)
                     .foregroundStyle(.white)
@@ -42,6 +72,7 @@ struct ProfilView: View {
                     .padding(.top, 40)
                     .font(.system(size: 20))
                     .foregroundStyle(.white)
+                
                 
                 
                 
