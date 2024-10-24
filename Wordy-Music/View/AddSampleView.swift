@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AddSampleView: View {
+    @StateObject private var viewModel = DescriptionViewModel()
     @State private var typeInstrument: String = ""  // Correction ici
     @State private var paysInstrument: String = ""
     @State private var titre: String = ""
