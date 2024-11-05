@@ -9,7 +9,7 @@ import Foundation
 class ProfilViewModel: ObservableObject {
     @Published var profil: ProfilModel = ProfilModel()
 
-    private let baseURL = "http://127.0.0.1:8081/user/7D79D3E1-D280-4637-A5C4-FCAD15AF762C"
+    private let baseURL = "http://127.0.0.1:8081/user/45740AFF-D71E-4118-988B-F8CB9BA90D1D"
     
     func fetchProfil() {
 
@@ -38,7 +38,7 @@ class ProfilViewModel: ObservableObject {
     
     
     func updatePseudo(_ profil: ProfilModel) {
-            guard let url = URL(string: "\(baseURL)\(profil.id)") else {
+            guard let url = URL(string: "\(baseURL)/\(profil.id)") else {
                 print("Invalid URL")
                 return
             }

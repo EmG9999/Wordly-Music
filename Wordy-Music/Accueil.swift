@@ -133,7 +133,6 @@ struct Accueil: View {
                             .shadow(radius: 10)
                     }
                 }
-                SampleView()
                 Spacer()
             }
             

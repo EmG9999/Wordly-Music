@@ -8,10 +8,26 @@
 import SwiftUI
 
     struct ContentView: View {
-       
+        @StateObject private var profilviewmodels = ProfilViewModel()
     
         var body: some View {
-           Tabview()
+            NavigationView {
+                
+                NavigationLink(destination: ProfilView() ){
+                    Text("Voir mon profil")
+                        .font(.headline)
+                        .foregroundColor(.blue)
+                        .padding()
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(10)
+                }
+                VStack {
+                    Text("Bienvenue sur la page d'accueil")
+
+                
+                }
+                .navigationTitle("Accueil")
+            }
         }
     }
    #Preview {
