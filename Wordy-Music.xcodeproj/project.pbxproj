@@ -34,7 +34,7 @@
 		766059752C9DB29100E0386D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		766059782C9DB29100E0386D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E93AB94D2CC91CA800182AFD /* ProfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilViewModel.swift; path = ../ProfilViewModel.swift; sourceTree = "<group>"; };
-		E93AB94F2CC91CE600182AFD /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilView.swift; path = ../ProfilView.swift; sourceTree = "<group>"; };
+		E93AB94F2CC91CE600182AFD /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		E93AB9512CC91D0300182AFD /* ProfilModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilModel.swift; path = ../ProfilModel.swift; sourceTree = "<group>"; };
 		E9AB0B152CC91E9D00A8759F /* Accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accueil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,9 +72,7 @@
 		764A15652CC650000037F29F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				764A156C2CC6A1FE0037F29F /* DescriptionView.swift */,
 				764A15702CC7DDDA0037F29F /* SampleView.swift */,
-				E93AB94F2CC91CE600182AFD /* ProfilView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -102,6 +100,8 @@
 				766059712C9DB29000E0386D /* Wordy_MusicApp.swift */,
 				766059732C9DB29000E0386D /* ContentView.swift */,
 				764A15652CC650000037F29F /* View */,
+				764A156C2CC6A1FE0037F29F /* DescriptionView.swift */,
+				E93AB94F2CC91CE600182AFD /* ProfilView.swift */,
 				764A15642CC64FF90037F29F /* ViewModel */,
 				764A15632CC64FF00037F29F /* Model */,
 				766059752C9DB29100E0386D /* Assets.xcassets */,
