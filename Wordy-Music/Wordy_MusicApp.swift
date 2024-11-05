@@ -11,7 +11,7 @@ import SwiftUI
 struct Wordy_MusicApp: App {
     var body: some Scene {
         WindowGroup {
-            Accueil()
+            ContentView()
         }
     }
 }

@@ -29,4 +29,15 @@ struct ProfilModel: Identifiable, Codable  {
         
     }
     
+    init(id: UUID, nom: String, prenom: String, email: String, mdp: String, pseudo: String, bioProfil: String, photoProfil: String) {
+            self.id = id
+            self.nom = nom
+            self.prenom = prenom
+            self.email = email
+            self.mdp = mdp
+            self.pseudo = pseudo
+            self.bioProfil = bioProfil
+            self.photoProfil = photoProfil
+        }
+    
 }
