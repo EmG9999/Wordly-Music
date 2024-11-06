@@ -19,6 +19,7 @@
 		E93AB94E2CC91CA800182AFD /* ProfilViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AB94D2CC91CA800182AFD /* ProfilViewModel.swift */; };
 		E93AB9502CC91CE600182AFD /* ProfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AB94F2CC91CE600182AFD /* ProfilView.swift */; };
 		E93AB9522CC91D0300182AFD /* ProfilModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93AB9512CC91D0300182AFD /* ProfilModel.swift */; };
+		E973345B2CDB81DC0088C22C /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E973345A2CDB81DC0088C22C /* Login.swift */; };
 		E9AB0B162CC91E9D00A8759F /* Accueil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB0B152CC91E9D00A8759F /* Accueil.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		E93AB94D2CC91CA800182AFD /* ProfilViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilViewModel.swift; path = ../ProfilViewModel.swift; sourceTree = "<group>"; };
 		E93AB94F2CC91CE600182AFD /* ProfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilView.swift; sourceTree = "<group>"; };
 		E93AB9512CC91D0300182AFD /* ProfilModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfilModel.swift; path = ../ProfilModel.swift; sourceTree = "<group>"; };
+		E973345A2CDB81DC0088C22C /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E9AB0B152CC91E9D00A8759F /* Accueil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accueil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				764A15702CC7DDDA0037F29F /* SampleView.swift */,
+				E973345A2CDB81DC0088C22C /* Login.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				E9AB0B162CC91E9D00A8759F /* Accueil.swift in Sources */,
 				764A15692CC68C0F0037F29F /* Description.swift in Sources */,
 				764A156F2CC7C8780037F29F /* Sample.swift in Sources */,
+				E973345B2CDB81DC0088C22C /* Login.swift in Sources */,
 				E93AB94E2CC91CA800182AFD /* ProfilViewModel.swift in Sources */,
 				764A15712CC7DDDA0037F29F /* SampleView.swift in Sources */,
 				E93AB9502CC91CE600182AFD /* ProfilView.swift in Sources */,
