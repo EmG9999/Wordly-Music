@@ -24,119 +24,131 @@ private var items: [CarouselItem] = [
 ]
 
 struct Accueil: View {
+    @StateObject private var viewModel = DescriptionViewModel()
     @State private var isPlaying = false  // État pour gérer l'état de lecture audio
     @State private var audioPlayer: AVAudioPlayer?
     var body: some View {
-        // ScrollView and HStack for horizontal scrolling
-        ZStack {
-            LinearGradient(
-                gradient: Gradient(stops: [
-                    .init(color: Color(red: 0.0/255.0, green: 77.0/255.0, blue: 99.0/255.0), location: 0.45),
-                    .init(color: Color(red: 4.0/255.0, green: 156.0/255.0, blue: 204.0/255.0), location: 1.0)
-                ]),
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .edgesIgnoringSafeArea(.all)
-            VStack {
-                Image("logo")
-                    .shadow(radius: 200)
-                // ScrollView and HStack for horizontal scrolling
-                ScrollView(.horizontal) {
-                    HStack(spacing: 25) {
-                        
-                        // Boucle sur les éléments pour afficher image et titre
-                        ForEach(items) { item in
-                            VStack {
-                                Image(item.imageName)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: UIScreen.main.bounds.width - 140, height: 185)
-                                    .clipped()
-                                    .cornerRadius(20)
-                                    .shadow(radius: 5, x: 5, y: 5)
-                                
-                                Text(item.title)
-                                    .font(.headline)
-                                    .padding(.top, 10)
-                                    .foregroundStyle(.white)
-                            }
-                            .frame(width: UIScreen.main.bounds.width - 150, height: 150) // Ajuste la taille du conteneur
-                            .scrollTransition { content, phase in
-                                content
-                                    .opacity(phase.isIdentity ? 1 : 0.5) // Apply opacity animation
-                                    .scaleEffect(y: phase.isIdentity ? 1 : 0.7) // Apply scale animation
-                            }
-                        }  .padding(.bottom,20)
-                    }
-                    
-                    .scrollTargetLayout() // Align content to the view
-                }
-                .contentMargins(50, for: .scrollContent) // Add padding
-                .scrollTargetBehavior(.viewAligned)
-                
-                HStack{
-                    Text("Instruments")
-                        .font(.system(size: 25))
-                        .foregroundStyle(.white)
-                        .padding(.trailing, 115)
-                    
-                    HStack {
-                        Text("Filtre")
-                            .font(.system(size: 22))
-                            .foregroundStyle(.white)
-                            .padding()
-                        Image("iconFiltre")
-                    }.overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(.white, lineWidth: 1)
-                            .frame(width: 114, height: 32)
-                    )
-                }
-                Divider()
-                    .frame(height: 1)
-                    .overlay(.white)
-                    .frame(width: 357)
-                    .padding(.bottom, 5)
-                HStack {
-                    Image("tabla")
-                        .resizable()
-                        .frame(width: 80, height:80 )
-                        .cornerRadius(14)
-                    
-                    VStack (alignment: .leading){
-                        Text("Tabla")
-                            .font(.system(size: 25))
-                            .fontWeight(.bold)
-                        Text("Loop")
-                            .font(.system(size: 20))
-                    }.foregroundStyle(.white)
-                        .padding(.trailing, 125)
-                    
-                    
-                    // Ajout du bouton circulaire pour la lecture audio
-                    Button(action: {
-                        if isPlaying {
-                            pauseAudio() // Si l'audio est en cours de lecture, on met en pause
-                        } else {
-                            playAudio()  // Si l'audio n'est pas en lecture, on démarre la lecture
+        NavigationStack {
+            // ScrollView and HStack for horizontal scrolling
+            ZStack {
+                LinearGradient(
+                    gradient: Gradient(stops: [
+                        .init(color: Color(red: 0.0/255.0, green: 77.0/255.0, blue: 99.0/255.0), location: 0.45),
+                        .init(color: Color(red: 4.0/255.0, green: 156.0/255.0, blue: 204.0/255.0), location: 1.0)
+                    ]),
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+                .edgesIgnoringSafeArea(.all)
+                VStack {
+                    Image("logo")
+                        .shadow(radius: 200)
+                    // ScrollView and HStack for horizontal scrolling
+                    ScrollView(.horizontal) {
+                        HStack(spacing: 25) {
+                            
+                            // Boucle sur les éléments pour afficher image et titre
+                            ForEach(items) { item in
+                                VStack {
+                                    Image(item.imageName)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: UIScreen.main.bounds.width - 140, height: 185)
+                                        .clipped()
+                                        .cornerRadius(20)
+                                        .shadow(radius: 5, x: 5, y: 5)
+                                    
+                                    Text(item.title)
+                                        .font(.headline)
+                                        .padding(.top, 10)
+                                        .foregroundStyle(.white)
+                                }
+                                .frame(width: UIScreen.main.bounds.width - 150, height: 150) // Ajuste la taille du conteneur
+                                .scrollTransition { content, phase in
+                                    content
+                                        .opacity(phase.isIdentity ? 1 : 0.5) // Apply opacity animation
+                                        .scaleEffect(y: phase.isIdentity ? 1 : 0.7) // Apply scale animation
+                                }
+                            }  .padding(.bottom,20)
+                                .onAppear {
+                                    viewModel.fetchSample()}
                         }
-                    }) {
-                        // Image change entre flèche et pause en fonction de l'état
-                        Image(systemName: isPlaying ? "pause.fill" : "play.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 19, height: 19)
-                            .foregroundColor(.black)
-                            .padding(20)
-                            .background(Circle().fill(isPlaying ?  Color(red: 237/255, green: 239/255, blue: 119/255): Color.white)) // Change la couleur
-                            .shadow(radius: 10)
+                        
+                        .scrollTargetLayout() // Align content to the view
                     }
+                    .contentMargins(50, for: .scrollContent) // Add padding
+                    .scrollTargetBehavior(.viewAligned)
+                    
+                    HStack{
+                        Text("Instruments")
+                            .font(.system(size: 25))
+                            .foregroundStyle(.white)
+                            .padding(.trailing, 115)
+                        
+                        HStack {
+                            Text("Filtre")
+                                .font(.system(size: 22))
+                                .foregroundStyle(.white)
+                                .padding()
+                            Image("iconFiltre")
+                        }.overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(.white, lineWidth: 1)
+                                .frame(width: 114, height: 32)
+                        )
+                    }
+                    Divider()
+                        .frame(height: 1)
+                        .overlay(.white)
+                        .frame(width: 357)
+                        .padding(.bottom, 5)
+                    
+                    VStack(alignment: .leading) {
+                        ForEach(viewModel.description) { desc in
+                            NavigationLink(destination: DescriptionView(description: desc)) {
+                                AsyncImage(url: URL(string: desc.image)) { image in
+                                    image
+                                        .resizable()
+                                        .frame(width: 80, height:80 )
+                                        .cornerRadius(14)
+                                }placeholder: {
+                                    ProgressView()
+                                        .frame(maxWidth: .infinity)
+                                }
+                                
+                                Text(desc.titre)
+                                    .font(.system(size: 25))
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(.white)
+                                //                        .padding(.trailing, 125)
+                                
+                                Spacer()
+                                // Ajout du bouton circulaire pour la lecture audio
+                                Button(action: {
+                                    if isPlaying {
+                                        pauseAudio() // Si l'audio est en cours de lecture, on met en pause
+                                    } else {
+                                        playAudio()  // Si l'audio n'est pas en lecture, on démarre la lecture
+                                    }
+                                }) {
+                                    // Image change entre flèche et pause en fonction de l'état
+                                    Image(systemName: isPlaying ? "pause.fill" : "play.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 19, height: 19)
+                                        .foregroundColor(.black)
+                                        .padding(20)
+                                        .background(Circle().fill(isPlaying ?  Color(red: 237/255, green: 239/255, blue: 119/255): Color.white)) // Change la couleur
+                                        .shadow(radius: 10)
+                                }
+                            }
+                        }
+                    }
+                    .padding()
+                    
+                    Spacer()
                 }
-                SampleView()
-                Spacer()
             }
-            
         }
     }
     // Fonction pour lire l'audio

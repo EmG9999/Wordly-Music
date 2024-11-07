@@ -12,6 +12,7 @@ struct ProfilView: View {
     @State private var newPseudo: String = ""
     
     var body: some View {
+        NavigationStack {
         ZStack{
             LinearGradient(
                             gradient: Gradient(stops: [
@@ -21,6 +22,8 @@ struct ProfilView: View {
                             startPoint: .top,
                             endPoint: .bottom
             ).ignoresSafeArea()
+            
+
             VStack {
                 
                 Image("LogoWM")
@@ -40,7 +43,7 @@ struct ProfilView: View {
                     .onAppear {
                         self.newPseudo = viewModel.profil.pseudo
                     }
-
+                
                 Button(action: {
                     let updatedProfil = ProfilModel(
                         id: viewModel.profil.id,
@@ -52,7 +55,7 @@ struct ProfilView: View {
                         bioProfil: viewModel.profil.bioProfil,
                         photoProfil: viewModel.profil.photoProfil
                     )
-
+                    
                     viewModel.updatePseudo(updatedProfil)
                 }) {
                     Text("Enregistrer")
@@ -69,24 +72,41 @@ struct ProfilView: View {
                     .font(.system(size: 20))
                 
                 Text("Trendings Samples")
-                    .padding(.top, 40)
+                    .padding(.top, 10)
                     .font(.system(size: 20))
                     .foregroundStyle(.white)
                 
-                
-                
-                
-                
                 SampleView()
                 
-                
-            }
-            
+               
+                    
+                    
+                    
+                    Button(action: {
+                        viewModel.logOut()
+                        viewModel.isLoggedIn = false
+                        
+                    }) {
+                        Text("Log Out")
+                            .fontWeight(.bold)
+                            .frame(width: 100)
+                            .padding()
+                            .background(Color.red)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }.navigationDestination(isPresented: $viewModel.isLoggedIn) {
+                        LoginView()
+                            .navigationBarBackButtonHidden(true)
+                    }
+                    
+                }
+
             .onAppear{
                 viewModel.fetchProfil()
             }
         }
     }
+}
 }
 
 struct ProfilView_Previews: PreviewProvider{

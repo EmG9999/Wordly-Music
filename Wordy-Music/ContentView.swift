@@ -8,10 +8,15 @@
 import SwiftUI
 
     struct ContentView: View {
-       
+        @StateObject private var viewModel = ProfilViewModel()
     
         var body: some View {
-           Tabview()
+            if viewModel.isLoggedIn == false {
+                LoginView()
+            } else {
+                Tabview()
+            }
+           
         }
     }
    #Preview {
